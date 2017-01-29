@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="SourceFiles">
+      <UniqueIdentifier>{dca243cc-417b-46a0-8ec7-3c6cfd87a23a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MDX">
+      <UniqueIdentifier>{81232ebc-07e8-4317-9e50-78e07d56f414}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MDX\DXSystem">
+      <UniqueIdentifier>{8a2e4612-07f5-4138-a99e-c43b588269e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MDX\Utillity">
+      <UniqueIdentifier>{037c5d74-08ad-4b70-bf08-4e22a02d36dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MDX\System">
+      <UniqueIdentifier>{90496af3-3bba-409c-9405-050415cd398b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MDX\Scene">
+      <UniqueIdentifier>{b8849f3e-f40c-4d52-a72c-b17668282465}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SourceFiles\Scene">
+      <UniqueIdentifier>{5e31af1f-8008-42a1-a846-90f5b90a233b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{1c56ed27-fccb-4124-bbce-0d5ea80196db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MDX\Shader">
+      <UniqueIdentifier>{65048af5-1c7f-4511-a064-9e6bfbd2938b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MDX\Math">
+      <UniqueIdentifier>{5395756c-6b69-4576-b02e-185232650349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MDX\Mesh">
+      <UniqueIdentifier>{0a90ee77-01d4-4893-a304-24dd4c66dffd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MDX\Mesh\Primitive">
+      <UniqueIdentifier>{522262d4-574f-40c4-ad5a-92c7f0547727}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MDX\View">
+      <UniqueIdentifier>{2d587856-30cf-4031-9ffe-de2fa5ae0a42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MDX\Font">
+      <UniqueIdentifier>{017b7915-aace-4f45-94e0-05c7deca9f83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MDX\Render">
+      <UniqueIdentifier>{2a340bb7-f211-445d-9c47-f241ecc61f0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MDX\Texture">
+      <UniqueIdentifier>{0882f34a-0194-4ad9-89c0-05ac8876b389}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MDX\2D">
+      <UniqueIdentifier>{5392d519-dc70-461c-a3dc-70b23f1cd1ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MDX\RenderState">
+      <UniqueIdentifier>{52e8ccc0-4989-4559-8c39-87f2671450a0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MDX\DXSystem\MDX_DXSystem.cpp">
+      <Filter>MDX\DXSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="MDX\Scene\MDX_SceneManager.cpp">
+      <Filter>MDX\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="MDX\Shader\MDX_Shader.cpp">
+      <Filter>MDX\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="MDX\System\MDX_System.cpp">
+      <Filter>MDX\System</Filter>
+    </ClCompile>
+    <ClCompile Include="MDX\Utillity\MDX_UtilDebug.cpp">
+      <Filter>MDX\Utillity</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceFiles\WinMain.cpp">
+      <Filter>SourceFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceFiles\Scene\SceneMain.cpp">
+      <Filter>SourceFiles\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="MDX\Mesh\Primitive\MDX_Box.cpp">
+      <Filter>MDX\Mesh\Primitive</Filter>
+    </ClCompile>
+    <ClCompile Include="MDX\View\MDX_View.cpp">
+      <Filter>MDX\View</Filter>
+    </ClCompile>
+    <ClCompile Include="MDX\Font\MDX_Font.cpp">
+      <Filter>MDX\Font</Filter>
+    </ClCompile>
+    <ClCompile Include="MDX\Render\MDX_RenderManager.cpp">
+      <Filter>MDX\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="MDX\Texture\MDX_Texture.cpp">
+      <Filter>MDX\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="MDX\Utillity\MDX_Utillity.cpp">
+      <Filter>MDX\Utillity</Filter>
+    </ClCompile>
+    <ClCompile Include="MDX\Mesh\MDX_Mesh.cpp">
+      <Filter>MDX\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="MDX\Render\MDX_BaseActor.cpp">
+      <Filter>MDX\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="MDX\Render\MDX_RenderTarget.cpp">
+      <Filter>MDX\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="MDX\2D\MDX_Sprite.cpp">
+      <Filter>MDX\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="MDX\RenderState\MDX_RenderState.cpp">
+      <Filter>MDX\RenderState</Filter>
+    </ClCompile>
+    <ClCompile Include="MDX\Render\MDX_Render.cpp">
+      <Filter>MDX\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Extension\imgui\directx11\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Extension\imgui\imgui.cpp" />
+    <ClCompile Include="Extension\imgui\imgui_demo.cpp" />
+    <ClCompile Include="Extension\imgui\imgui_draw.cpp" />
+    <ClCompile Include="MDX\Mesh\MDX_BaseMesh.cpp" />
+    <ClCompile Include="MDX\Mesh\MDX_DXTKMesh.cpp" />
+    <ClCompile Include="SourceFiles\SkyBox\SkyBox.cpp" />
+    <ClCompile Include="SourceFiles\Camera\BasicCamera.cpp" />
+    <ClCompile Include="MDX\Math\MDX_Vector3f.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MDX\DXSystem\MDX_DXSystem.h">
+      <Filter>MDX\DXSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\Scene\MDX_Scene.h">
+      <Filter>MDX\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\Scene\MDX_SceneManager.h">
+      <Filter>MDX\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\Shader\MDX_DefaultVertexLayout.h">
+      <Filter>MDX\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\Shader\MDX_Shader.h">
+      <Filter>MDX\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\System\MDX_System.h">
+      <Filter>MDX\System</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\Utillity\MDX_Singleton.h">
+      <Filter>MDX\Utillity</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\Utillity\MDX_UtilDebug.h">
+      <Filter>MDX\Utillity</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\Utillity\MDX_Utillity.h">
+      <Filter>MDX\Utillity</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\MDX.h">
+      <Filter>MDX</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceFiles\Scene\SceneMain.h">
+      <Filter>SourceFiles\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\Math\MDX_Math.h">
+      <Filter>MDX\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\Mesh\Primitive\MDX_Box.h">
+      <Filter>MDX\Mesh\Primitive</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\View\MDX_View.h">
+      <Filter>MDX\View</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\Font\MDX_Font.h">
+      <Filter>MDX\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\Render\MDX_RenderManager.h">
+      <Filter>MDX\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\Texture\MDX_Texture.h">
+      <Filter>MDX\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\Mesh\MDX_Mesh.h">
+      <Filter>MDX\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\Render\MDX_IActor.h">
+      <Filter>MDX\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\Render\MDX_BaseActor.h">
+      <Filter>MDX\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\Render\MDX_RenderTarget.h">
+      <Filter>MDX\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\2D\MDX_Sprite.h">
+      <Filter>MDX\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\RenderState\MDX_RenderState.h">
+      <Filter>MDX\RenderState</Filter>
+    </ClInclude>
+    <ClInclude Include="MDX\Render\MDX_Render.h">
+      <Filter>MDX\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension\imgui\directx11\imgui_impl_dx11.h" />
+    <ClInclude Include="Extension\imgui\imconfig.h" />
+    <ClInclude Include="Extension\imgui\imgui.h" />
+    <ClInclude Include="Extension\imgui\imgui_internal.h" />
+    <ClInclude Include="MDX\Mesh\MDX_BaseMesh.h" />
+    <ClInclude Include="MDX\Mesh\MDX_DXTKMesh.h" />
+    <ClInclude Include="SourceFiles\SkyBox\SkyBox.h" />
+    <ClInclude Include="SourceFiles\Camera\BasicCamera.h" />
+    <ClInclude Include="MDX\Math\MDX_Vector3f.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Shader\PixelShader.hlsl">
+      <Filter>Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\VertexShader.hlsl">
+      <Filter>Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\PS_Primitive.hlsl">
+      <Filter>Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\VS_Primitive.hlsl">
+      <Filter>Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\PS_2D.hlsl">
+      <Filter>Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\VS_2D.hlsl">
+      <Filter>Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\PS_SkyBox.hlsl" />
+    <FxCompile Include="Shader\VS_SkyBox.hlsl" />
+    <FxCompile Include="Shader\PS_PostEffect.hlsl" />
+    <FxCompile Include="Shader\VS_PostEffect.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shader\PBRCommon.hlsli" />
+    <None Include="Shader\Math.hlsli" />
+  </ItemGroup>
+</Project>

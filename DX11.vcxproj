@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{766D61B9-B444-46A7-A907-99D5D1A9BDAD}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>DX11</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>DirectXTK\Include;Extension;$(IncludePath)</IncludePath>
+    <LibraryPath>DirectXTK\Bin\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>DirectXTK\Include;Extension;$(IncludePath)</IncludePath>
+    <LibraryPath>DirectXTK\Bin\Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_WIN32_WINNT=0x0602;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;DirectXTK.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <FxCompile>
+      <ObjectFileOutput>$(LocalDebuggerWorkingDirectory)\DATA\Shader\%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_WIN32_WINNT=0x0602;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;DirectXTK.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Extension\imgui\directx11\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Extension\imgui\imgui.cpp" />
+    <ClCompile Include="Extension\imgui\imgui_demo.cpp" />
+    <ClCompile Include="Extension\imgui\imgui_draw.cpp" />
+    <ClCompile Include="MDX\2D\MDX_Sprite.cpp" />
+    <ClCompile Include="MDX\DXSystem\MDX_DXSystem.cpp" />
+    <ClCompile Include="MDX\Font\MDX_Font.cpp" />
+    <ClCompile Include="MDX\Math\MDX_Vector3f.cpp" />
+    <ClCompile Include="MDX\Mesh\MDX_BaseMesh.cpp" />
+    <ClCompile Include="MDX\Mesh\MDX_DXTKMesh.cpp" />
+    <ClCompile Include="MDX\Mesh\MDX_Mesh.cpp" />
+    <ClCompile Include="MDX\Mesh\Primitive\MDX_Box.cpp" />
+    <ClCompile Include="MDX\RenderState\MDX_RenderState.cpp" />
+    <ClCompile Include="MDX\Render\MDX_BaseActor.cpp" />
+    <ClCompile Include="MDX\Render\MDX_Render.cpp" />
+    <ClCompile Include="MDX\Render\MDX_RenderManager.cpp" />
+    <ClCompile Include="MDX\Render\MDX_RenderTarget.cpp" />
+    <ClCompile Include="MDX\Scene\MDX_SceneManager.cpp" />
+    <ClCompile Include="MDX\Shader\MDX_Shader.cpp" />
+    <ClCompile Include="MDX\System\MDX_System.cpp" />
+    <ClCompile Include="MDX\Texture\MDX_Texture.cpp" />
+    <ClCompile Include="MDX\Utillity\MDX_UtilDebug.cpp" />
+    <ClCompile Include="MDX\Utillity\MDX_Utillity.cpp" />
+    <ClCompile Include="MDX\View\MDX_View.cpp" />
+    <ClCompile Include="SourceFiles\Camera\BasicCamera.cpp" />
+    <ClCompile Include="SourceFiles\Scene\SceneMain.cpp" />
+    <ClCompile Include="SourceFiles\SkyBox\SkyBox.cpp" />
+    <ClCompile Include="SourceFiles\WinMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Extension\imgui\directx11\imgui_impl_dx11.h" />
+    <ClInclude Include="Extension\imgui\imconfig.h" />
+    <ClInclude Include="Extension\imgui\imgui.h" />
+    <ClInclude Include="Extension\imgui\imgui_internal.h" />
+    <ClInclude Include="MDX\2D\MDX_Sprite.h" />
+    <ClInclude Include="MDX\DXSystem\MDX_DXSystem.h" />
+    <ClInclude Include="MDX\Font\MDX_Font.h" />
+    <ClInclude Include="MDX\Math\MDX_Math.h" />
+    <ClInclude Include="MDX\Math\MDX_Vector3f.h" />
+    <ClInclude Include="MDX\MDX.h" />
+    <ClInclude Include="MDX\Mesh\MDX_BaseMesh.h" />
+    <ClInclude Include="MDX\Mesh\MDX_DXTKMesh.h" />
+    <ClInclude Include="MDX\Mesh\MDX_Mesh.h" />
+    <ClInclude Include="MDX\Mesh\Primitive\MDX_Box.h" />
+    <ClInclude Include="MDX\RenderState\MDX_RenderState.h" />
+    <ClInclude Include="MDX\Render\MDX_BaseActor.h" />
+    <ClInclude Include="MDX\Render\MDX_IActor.h" />
+    <ClInclude Include="MDX\Render\MDX_Render.h" />
+    <ClInclude Include="MDX\Render\MDX_RenderManager.h" />
+    <ClInclude Include="MDX\Render\MDX_RenderTarget.h" />
+    <ClInclude Include="MDX\Scene\MDX_Scene.h" />
+    <ClInclude Include="MDX\Scene\MDX_SceneManager.h" />
+    <ClInclude Include="MDX\Shader\MDX_DefaultVertexLayout.h" />
+    <ClInclude Include="MDX\Shader\MDX_Shader.h" />
+    <ClInclude Include="MDX\System\MDX_System.h" />
+    <ClInclude Include="MDX\Texture\MDX_Texture.h" />
+    <ClInclude Include="MDX\Utillity\MDX_Singleton.h" />
+    <ClInclude Include="MDX\Utillity\MDX_UtilDebug.h" />
+    <ClInclude Include="MDX\Utillity\MDX_Utillity.h" />
+    <ClInclude Include="MDX\View\MDX_View.h" />
+    <ClInclude Include="SourceFiles\Camera\BasicCamera.h" />
+    <ClInclude Include="SourceFiles\Scene\SceneMain.h" />
+    <ClInclude Include="SourceFiles\SkyBox\SkyBox.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Shader\PixelShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shader\PS_2D.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shader\PS_PostEffect.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shader\PS_Primitive.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shader\PS_SkyBox.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shader\VertexShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shader\VS_2D.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shader\VS_PostEffect.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shader\VS_Primitive.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shader\VS_SkyBox.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shader\Math.hlsli" />
+    <None Include="Shader\PBRCommon.hlsli" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
