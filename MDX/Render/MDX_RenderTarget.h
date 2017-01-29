@@ -47,6 +47,8 @@ namespace MDX{
 		*/
 		ID3D11RenderTargetView* GetRenderTargetView() const { return m_rtv; }
 		ID3D11ShaderResourceView* GetShaderResourceView() const { return m_srv; }
+		UINT GetWidth() const { return m_width; }
+		UINT GetHeight() const { return m_height; }
 
 	private:
 		/**

@@ -16,6 +16,7 @@
 #include "../Math/MDX_Math.h"
 #include "../Texture/MDX_Texture.h"
 #include "MDX_RenderTarget.h"
+#include "MDX_ConstantBuffer.h"
 
 /**
 * @brief namespace MDX
@@ -55,6 +56,7 @@ namespace MDX{
 			float		metallic;
 			Vector2f	tmp;
 		};
+
 	public:
 		RenderManager();
 		~RenderManager();
@@ -123,9 +125,7 @@ namespace MDX{
 		void SetMatProjection(const Matrix4X4& prj){ m_matrix.matProjection = prj; }
 
 	private:
-		/**
-		* @brief レンダーターゲットの種類
-		*/
+		//レンダーターゲットの種類
 		enum RenderTargetType{
 			RT_HDR,
 			RT_DOWN_SCALED_HDR,
@@ -139,6 +139,16 @@ namespace MDX{
 		static const int NUM_TONEMAP_TEXTURE = 4;
 		static const int NUM_BLOOM_TEXTURE = 4;
 
+		// ダウンスケール4x4用コンスタントバッファ
+		struct CBDownScale4x4 {
+			Vector2f	sampleOffset[4 * 4];
+		};
+
+		// 輝度計算初回用コンスタントバッファ
+		struct CBSampleLumInitial {
+			Vector2f	sampleOffset[3 * 3];
+			Vector2f	tmp;
+		};
 
 	private:
 		/**
@@ -146,8 +156,27 @@ namespace MDX{
 		*/
 		void DrawActor(IActor* actor);
 
+		/**
+		* @brief ダウンスケール4x4のサンプルオフセット取得
+		*/
+		void GetDownScale4x4SampleOffset(UINT width, UINT height, Vector2f* sampleOffset);
+
+	private:
+		// シーンをダウンスケール
+		void Scene_DownScale();
+
+		// 輝度計算
+		void CalculateLuminance();
+
+		// 順応輝度計算
+		void CalculateAdaptionLuminance();
+
 	private:
 		std::shared_ptr<Shader> m_shader;
+		std::shared_ptr<Shader> m_shaderDownScale4x4;
+		std::shared_ptr<Shader> m_shaderSampleLumInitial;
+		std::shared_ptr<Shader> m_shaderSampleLumInterative;
+		std::shared_ptr<Shader> m_shaderSampleLumFinal;
 		std::shared_ptr<Shader> m_shaderPostEffect;
 
 		std::shared_ptr<Texture>	m_defaultIrradianceTex;
@@ -157,6 +186,9 @@ namespace MDX{
 		ID3D11Buffer* m_cbEnvironment = nullptr;
 		ID3D11Buffer* m_cbPbr = nullptr;
 
+		std::shared_ptr<ConstantBuffer> m_cbDownScale4x4 = nullptr;
+		std::shared_ptr<ConstantBuffer> m_cbSampleLumInitial = nullptr;
+
 		std::vector<IActor*> m_actor;
 
 		CBMatrix m_matrix;
@@ -164,6 +196,10 @@ namespace MDX{
 		RenderTarget m_renderTarget[RT_TYPE_MAX];
 		RenderTarget m_toneMapTexture[NUM_TONEMAP_TEXTURE];
 		RenderTarget m_bloomTexture[NUM_BLOOM_TEXTURE];
+		RenderTarget m_adaptionLumTexture[2];
+
+		RenderTarget* m_adaptedLumLast = nullptr;
+		RenderTarget* m_adaptedLumCur = nullptr;
 	};
 
 

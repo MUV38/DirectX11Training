@@ -101,6 +101,7 @@
     <ClCompile Include="MDX\Mesh\Primitive\MDX_Box.cpp" />
     <ClCompile Include="MDX\RenderState\MDX_RenderState.cpp" />
     <ClCompile Include="MDX\Render\MDX_BaseActor.cpp" />
+    <ClCompile Include="MDX\Render\MDX_ConstantBuffer.cpp" />
     <ClCompile Include="MDX\Render\MDX_Render.cpp" />
     <ClCompile Include="MDX\Render\MDX_RenderManager.cpp" />
     <ClCompile Include="MDX\Render\MDX_RenderTarget.cpp" />
@@ -133,6 +134,7 @@
     <ClInclude Include="MDX\Mesh\Primitive\MDX_Box.h" />
     <ClInclude Include="MDX\RenderState\MDX_RenderState.h" />
     <ClInclude Include="MDX\Render\MDX_BaseActor.h" />
+    <ClInclude Include="MDX\Render\MDX_ConstantBuffer.h" />
     <ClInclude Include="MDX\Render\MDX_IActor.h" />
     <ClInclude Include="MDX\Render\MDX_Render.h" />
     <ClInclude Include="MDX\Render\MDX_RenderManager.h" />
@@ -162,6 +164,10 @@
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
     </FxCompile>
+    <FxCompile Include="Shader\PS_DownScale4x4.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+    </FxCompile>
     <FxCompile Include="Shader\PS_PostEffect.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
@@ -171,6 +177,18 @@
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shader\PS_SampleLumFinal.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shader\PS_SampleLumInitial.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shader\PS_SampleLumInterative.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
     </FxCompile>
     <FxCompile Include="Shader\PS_SkyBox.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>

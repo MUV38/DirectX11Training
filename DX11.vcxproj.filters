@@ -123,6 +123,7 @@
     <ClCompile Include="SourceFiles\SkyBox\SkyBox.cpp" />
     <ClCompile Include="SourceFiles\Camera\BasicCamera.cpp" />
     <ClCompile Include="MDX\Math\MDX_Vector3f.cpp" />
+    <ClCompile Include="MDX\Render\MDX_ConstantBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MDX\DXSystem\MDX_DXSystem.h">
@@ -206,6 +207,7 @@
     <ClInclude Include="SourceFiles\SkyBox\SkyBox.h" />
     <ClInclude Include="SourceFiles\Camera\BasicCamera.h" />
     <ClInclude Include="MDX\Math\MDX_Vector3f.h" />
+    <ClInclude Include="MDX\Render\MDX_ConstantBuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Shader\PixelShader.hlsl">
@@ -230,6 +232,10 @@
     <FxCompile Include="Shader\VS_SkyBox.hlsl" />
     <FxCompile Include="Shader\PS_PostEffect.hlsl" />
     <FxCompile Include="Shader\VS_PostEffect.hlsl" />
+    <FxCompile Include="Shader\PS_DownScale4x4.hlsl" />
+    <FxCompile Include="Shader\PS_SampleLumInitial.hlsl" />
+    <FxCompile Include="Shader\PS_SampleLumFinal.hlsl" />
+    <FxCompile Include="Shader\PS_SampleLumInterative.hlsl" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Shader\PBRCommon.hlsli" />
